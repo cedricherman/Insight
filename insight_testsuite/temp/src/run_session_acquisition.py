@@ -15,7 +15,7 @@ from collections import OrderedDict
 # get this script path as a reference to find input/output folders
 thispath = os.path.dirname(os.path.realpath(__file__))
 #  list of relevant fields to extract
-header_list = ['ip', 'date', 'time', 'cik', 'accession', 'extention' ]
+header_list = ['ip', 'date', 'time']
 
 
 """
@@ -76,7 +76,7 @@ with open(logfile_path, 'r') as f, open(sessionfile_path, 'w') as fout:
     for line_str in f:
         
         # extract relevant information
-        ip_address, current_datetime, _ = utils.extract_info(line_str, indexes)
+        ip_address, current_datetime = utils.extract_info(line_str, indexes)
         
         # detect closed sessions and write them to output file
         ip2close = utils.close_sessions(open_sessions, current_datetime, timeout_delta, fout)

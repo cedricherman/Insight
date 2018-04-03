@@ -71,7 +71,7 @@ def extract_info(csv_string, mapping):
     PARAMETERS
     csv_string: input string containing comma separated information
     mapping: python dictionary with field->index mapping
-    Returns a tuple of ip address string, datetime object and document name
+    Returns a tuple of ip address string, datetime object
     """
     # get one line 
     line = csv_string.rstrip('\n').split(',')
@@ -86,10 +86,10 @@ def extract_info(csv_string, mapping):
 #    datetime_obj = datetime.strptime(d, '%Y-%m-%d %H:%M:%S')
     
     # extract document title
-    web_doc = ''.join((line[mapping['cik']], line[mapping['accession']], \
-                        line[mapping['extention']]))
+#    web_doc = ''.join((line[mapping['cik']], line[mapping['accession']], \
+#                        line[mapping['extention']]))
     
-    return ip_address, datetime_obj, web_doc
+    return ip_address, datetime_obj
 
 def end_all_session(sessions_dict, fp):
     """

@@ -45,7 +45,7 @@ Finally, the output file will be created in `output/` folder. Default name is `s
 # Test
 
 There is a total of 6 tests available with varying inactivity period.
-Test 1 and test 2 used the provided input file but different inactivity period.
-Test 3 and test 4 are consecutives samples from EDGAR weblog file dated at 2017-06-25 (downloaded from their website)
-Test 5 and test 6 are composed of random samples from the same EDGAR weblog file (re-ordered by time)
+* Test 1 and test 2 used the provided input file but different inactivity period.
+* Test 3 and test 4 are consecutives samples from EDGAR weblog file dated at 2017-06-25 (downloaded from their website)
+* Test 5 and test 6 are composed of random samples from the same EDGAR weblog file (re-ordered by time)
 
